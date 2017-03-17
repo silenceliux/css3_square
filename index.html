@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    *{margin: 0;padding: 0;}
+    html,body{height: 100%;background: black;}
+    .all div{
+        width: 200px;
+        height: 200px;
+        opacity: 0.8;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        line-height: 200px;
+        font-size: 48px;
+        color: #ffffff;
+        text-align: center;
+    }
+    #fount{
+       transform:translateZ(100px);
+        background-color: #f05b19;
+    }
+    #top{
+        transform:translateY(-100px) rotateX(90deg);
+        background-color: #774aa7;
+    }
+    #bottom{
+        background-color: #4d829a;
+        transform:translateY(100px) rotateX(-90deg);
+    }
+    #left{
+        background-color: #c72128;
+        transform:translateX(-100px) rotateY(-90deg);
+    }
+    #right{
+        background-color: #63b670;
+        transform:translateX(100px) rotateY(90deg);
+    }
+    #back{
+        background-color: #d1be00;
+        transform:translateZ(-100px) rotateX(180deg);
+    }
+    .all
+    {
+        height: 100%;
+        position: relative;
+        transform-style:preserve-3d;
+        animation: animate 5s linear  infinite;
+        perspective:0px;
+        /*-moz-animation: myfirst 5s;	*//* Firefox */
+        /*-webkit-animation: myfirst 5s;	*//* Safari 和 Chrome */
+        /*-o-animation: myfirst 5s;	*//* Opera */
+    }
+    @keyframes animate{
+    from {transform:rotatey(0) rotatex(0) }
+    to {transform:rotatey(360deg) rotatex(360deg)}
+    }
+</style>
+<div class="all">
+
+    <div id="fount">fount</div>
+    <div id="top">top</div>
+    <div id="bottom">bottom</div>
+    <div id="left">left</div>
+    <div id="right">right</div>
+    <div id="back">back</div>
+</div>
+</body>
+</html>
